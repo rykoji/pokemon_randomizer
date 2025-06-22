@@ -1,4 +1,5 @@
 import { fileURLToPath, URL } from 'node:url'
+import { resolve } from 'path'  // Add this import
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
@@ -18,11 +19,6 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    assetsDir: 'assets',
-    rollupOptions: {
-      input: {
-        main: resolve(__dirname, 'index.html')
-      }
-    }
+    assetsDir: 'assets'
   }
 })
